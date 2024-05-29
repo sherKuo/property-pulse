@@ -7,7 +7,7 @@ const InfoBoxes = () => {
         <section>
             <div className='container-xl lg:container m-auto'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-lg'>
-                    {/* <InfoBox
+                    <InfoBox
                         heading='For Renters'
                         backgroundColor='bg-gray-100'
                         buttonInfo={{
@@ -22,13 +22,13 @@ const InfoBoxes = () => {
                         heading='For Property Owners'
                         backgroundColor='bg-blue-100'
                         buttonInfo={{
-                            text: 'Add Properties',
+                            text: 'Add Property',
                             link: '/properties/add',
                             backgroundColor: 'bg-blue-500',
                         }}>
                         List your properties and reach potential
-                        teneants. Rent as an Airbnb or long term.
-                    </InfoBox> */}
+                        tenants. Rent short or long term.
+                    </InfoBox>
                 </div>
             </div>
         </section>
