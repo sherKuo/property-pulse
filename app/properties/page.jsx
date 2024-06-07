@@ -1,8 +1,17 @@
 import React from 'react';
-import properties from '@/properties.json';
 import PropertyCard from '@/components/PropertyCard';
+import { fetchProperties } from '@/utils/requests';
 
-const PropertiesPage = () => {
+// doing this from the server so we need to include the full domain
+
+const PropertiesPage = async () => {
+    const properties = await fetchProperties();
+
+    // Sort properties by date
+    properties.sort(
+        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+    );
+
     return (
         <section className='px-4 py-6'>
             <div className='container-xl lg:container m-auto px-4 py-6'>
