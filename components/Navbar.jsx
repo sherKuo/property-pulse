@@ -13,7 +13,7 @@ import React from 'react';
 
 const Navbar = () => {
     const { data: session } = useSession();
-
+    const profileImage = session?.user?.image;
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isProfileDropdownOpen, setIsProfileDropdownOpen] =
@@ -124,7 +124,7 @@ const Navbar = () => {
                         <div className='hidden md:block md:ml-6'>
                             <div className='flex items-center'>
                                 {providers && Object.values(providers).map((provider, index) => (
-                                    <button onClick={() => signIn} key={index} className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'>
+                                    <button onClick={() => signIn(provider.id)} key={index} className='flex items-center text-white bg-gray-700 hover:bg-gray-900 hover:text-white rounded-md px-3 py-2'>
                                     <FaGoogle className='text-white mr-2' />
                                     <span>Login or Register</span>
                                 </button>
@@ -186,8 +186,10 @@ const Navbar = () => {
                                         </span>
                                         <Image
                                             className='h-8 w-8 rounded-full'
-                                            src={profileDefault}
+                                            src={profileImage || profileDefault}
                                             alt=''
+                                            width ={40}
+                                            height={40}
                                         />
                                     </button>
                                 </div>
