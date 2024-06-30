@@ -6,35 +6,36 @@ import React from 'react'
 const PropertyAddForm = () => {
     const [mounted, setMounted] = useState(false);
     const [fields, setFields] = useState({
-      type: '',
-      name: '',
-      description: '',
+      type: 'House',
+      name: 'Jeffs House',
+      description: 'Jeffs house',
       location: {
-        street: '',
-        city: '',
-        state: '',
-        zipcode: '',
+        street: '123 Elm Ln',
+        city: 'San Diego',
+        state: 'CA',
+        zipcode: '92129',
       },
-      beds: '',
-      baths: '',
-      square_feet: '',
+      beds: '1',
+      baths: '1',
+      square_feet: '1',
       amenities: [],
       rates: {
-        weekly: '',
-        monthly: '',
-        nightly: '',
+        weekly: '1',
+        monthly: '1',
+        nightly: '1',
       },
       seller_info: {
-        name: '',
-        email: '',
-        phone: '',
+        name: 'Jeff',
+        email: 'jeff@mail.com',
+        phone: '1234567890',
       },
       images: [],
     });
 
     useEffect( () => {
         setMounted(true);
-    })
+        window.onbeforeunload = () => true;
+    }, []);
   
     const handleChange = (e) => { 
       const { name, value } = e.target;
@@ -101,7 +102,7 @@ const PropertyAddForm = () => {
     };
 
   return mounted &&
-    <form action="/api/properties" method="POST" encType='multipart/form-data'>
+    <form action="/api/properties" method="POST" id="form">
           <h2 className="text-3xl text-center font-semibold mb-6">
             Add Property
           </h2>

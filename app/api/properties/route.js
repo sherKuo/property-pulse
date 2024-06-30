@@ -64,15 +64,14 @@ export const POST = async (request) => {
                 email: formData.get('seller_info.email'),
                 phone: formData.get('seller_info.phone'),
             },
-            owner: userId,
+            owner: sessionUser.userId,
             images,
         };
-
-        console.log(propertyData);
 
         return new Response(JSON.stringify({message:'Success'}), { status: 200});
 
     } catch (error) {
+      console.log(error);
         return new Response(JSON.stringify({message:'Failed to add Property'}, { status: 500}));
     }
 }
