@@ -30,10 +30,13 @@ export const POST = async (request) => {
         await connectDB();
 
         const sessionUser = await getSessionUser();
-
+        
+        // Handle the session if it is null otherwise you can pass over this.
         if (!sessionUser || !sessionUser.userId) {
             return new Response('User ID is required', { status: 401});
         }
+
+        const { userId } = sessionUser;
 
         const formData = await request.formData();
 
@@ -65,10 +68,16 @@ export const POST = async (request) => {
                 phone: formData.get('seller_info.phone'),
             },
             owner: sessionUser.userId,
-            images,
+            // images,
         };
 
-        return new Response(JSON.stringify({message:'Success'}), { status: 200});
+        const newProperty = new Property(propertyData);
+        await newProperty.save();
+
+        // instead of returning 200 we want to redirect from the server to the property page were're creating
+        // return new Response(JSON.stringify({message:'Success'}), { status: 200});
+
+        return Response.redirect(`${process.env.NEXTAUTH_URL}/properties/${newProperty._id}`);
 
     } catch (error) {
       console.log(error);
