@@ -14,7 +14,10 @@ When asking a friend to test...
 All the moving parts
 
 -   Udemy https://www.udemy.com/course/nextjs-from-scratch/?couponCode=KEEPLEARNING
+
 -   Google cloud https://console.cloud.google.com/welcome?project=proppertypulseproj
+
 -   MongoDB compass https://cloud.mongodb.com/v2/6661fed6cc1d1c78a263686c#/overview
+
 -   Cloudinary https://console.cloudinary.com/console/c-baf944e7fe5ab9b14440340e3f60e5/media_library/folders/c83593de20892a1c496fac5d7b077a295e?view_mode=mosaic
 -
