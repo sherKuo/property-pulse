@@ -67,7 +67,7 @@ export const POST = async (request) => {
                 email: formData.get('seller_info.email'),
                 phone: formData.get('seller_info.phone'),
             },
-            owner: sessionUser.userId,
+            owner: userId,
         };
 
         // Upload image(s) to Cloudinary
@@ -83,8 +83,7 @@ export const POST = async (request) => {
       
             // Make request to upload to Cloudinary
             const result = await cloudinary.uploader.upload(
-              `data:image/png;base64,${imageBase64}`,
-              {
+              `data:image/png;base64,${imageBase64}`,{
                 folder: 'propertypulse',
               }
             );
