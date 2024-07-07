@@ -32,13 +32,13 @@ async function fetchProperty(id) {
             return null;
         }
 
-        const res = await fetch(`${apiDomain}/properties`, {cache: 'no-store'});
+        const response = await fetch(`${apiDomain}/properties/${id}`, {cache: 'no-store'});
 
-        if (!res.ok) {
+        if (!response.ok) {
             throw new Error('Failed to fetch data');
         }
 
-        return res.json();
+        return response.json();
     } catch (error) {
         console.log(error);
         return null;
