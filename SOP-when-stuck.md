@@ -21,3 +21,5 @@ All the moving parts
 
 -   Cloudinary https://console.cloudinary.com/console/c-baf944e7fe5ab9b14440340e3f60e5/media_library/folders/c83593de20892a1c496fac5d7b077a295e?view_mode=mosaic
 -
+
+Debugging

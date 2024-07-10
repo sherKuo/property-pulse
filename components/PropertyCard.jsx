@@ -12,14 +12,16 @@ import {
 const PropertyCard = ({ property }) => {
     const getRateDisplay = () => {
         const { rates } = property;
+    
         if (rates.monthly) {
-            return `${rates.monthly.toLocaleString()}/mo`;
+          return `${rates.monthly.toLocaleString()}/mo`;
         } else if (rates.weekly) {
-            return `${rates.weekly.toLocaleString()}/wk`;
+          return `${rates.weekly.toLocaleString()}/wk`;
         } else if (rates.nightly) {
-            return `${rates.nightly.toLocaleString()}/night`;
+          return `${rates.nightly.toLocaleString()}/night`;
         }
-    };
+      };
+    
     return (
         // <!-- Listing 1 -->
         <div className='rounded-xl shadow-md relative'>
