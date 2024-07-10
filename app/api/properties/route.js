@@ -38,7 +38,7 @@ export const POST = async (request) => {
         const formData = await request.formData();
 
         // Access all values forom amenities and images
-        const amenities = formData.getAll('amentities');
+        const amenities = formData.getAll('amenities');
         const images = formData.getAll('images').filter((image) => image.name !== '');
 
         // Create propertyData object for database
@@ -57,8 +57,10 @@ export const POST = async (request) => {
             square_feet: formData.get('square_feet'),
             amenities,
             rates: {
-                weekly: formData.get('')
-            },
+                weekly: formData.get('rates.weekly'),
+                monthly: formData.get('rates.monthly'),
+                nightly: formData.get('rates.nightly.'),
+              },
             seller_info: {
                 name: formData.get('seller_info.name'),
                 email: formData.get('seller_info.email'),
