@@ -9,7 +9,6 @@ import {
     FaMapMarker,
 } from 'react-icons/fa';
 
-// import PropertyMap from '@/components/PropertyMap';
 
 const PropertyDetails = ({ property }) => {
     console.log("from PropertyDetails.jsx: Finding Nightly/Weekly/Monthly rates", property.rates);
@@ -118,11 +117,7 @@ const PropertyDetails = ({ property }) => {
                     ))}
                 </ul>
             </div>
-            <div className='bg-white p-6 rounded-lg shadow-md mt-6'>
-                <div id='map'></div>
-                {/* <PropertyMap property={property} /> */}
-
-            </div>
+            
         </main>
     );
 };
