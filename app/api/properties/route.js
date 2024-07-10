@@ -60,9 +60,9 @@ export const POST = async (request) => {
             square_feet: formData.get('square_feet'),
             amenities,
             rates: {
+                nightly: formData.get('rates.nightly'),
                 weekly: formData.get('rates.weekly'),
                 monthly: formData.get('rates.monthly'),
-                nightly: formData.get('rates.nightly.'),
               },
             seller_info: {
                 name: formData.get('seller_info.name'),
