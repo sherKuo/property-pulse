@@ -11,7 +11,7 @@ import {
 
 
 const PropertyDetails = ({ property }) => {
-    console.log("from PropertyDetails.jsx: Finding Nightly/Weekly/Monthly rates", property.rates);
+    // console.log("from PropertyDetails.jsx: Finding Nightly/Weekly/Monthly rates", property.rates);
     return (
         <main>
             <div className='bg-white p-6 rounded-lg shadow-md text-center md:text-left'>
