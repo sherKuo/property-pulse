@@ -41,7 +41,6 @@ const PropertyEditForm = () => {
 
     useEffect( () => {
         setMounted(true);
-        window.onbeforeunload = () => true;
 
         // Fetch prpperty data for form
         const fetchPropertyData = async () => {
