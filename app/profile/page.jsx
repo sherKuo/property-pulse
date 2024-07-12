@@ -100,7 +100,7 @@ const ProfilePage = () => {
               )}
               {loading ? (<Spinner loading={loading}/>): (
                 properties.map((property) => (
-                  <div key={property.id} className="mb-10">
+                  <div key={property._id} className="mb-10">
                   <Link href={`/properties/${property._id}`}>
                     <Image
                       className="h-32 w-full rounded-md object-cover"

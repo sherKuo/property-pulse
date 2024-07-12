@@ -19,11 +19,11 @@ const PropertyPage = () => {
     const [loading, setLoading] = useState(true);
 
     const fetchPropertyData = async () => {
-        console.log('ID', id);
+        // console.log('ID', id);
         if (!id) return;
         try {
             const property = await fetchProperty(id);
-            console.log(property);
+            // console.log(property);
             setProperty(property);
         } catch (error) {
             crossOriginIsolated.error(
