@@ -34,7 +34,6 @@ const PropertyAddForm = () => {
 
     useEffect( () => {
         setMounted(true);
-        window.onbeforeunload = () => true;
     }, []);
   
     const handleChange = (e) => { 
