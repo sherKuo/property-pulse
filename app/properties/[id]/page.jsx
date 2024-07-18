@@ -79,7 +79,7 @@ const PropertyPage = () => {
 								<aside className='space-y-4'>
 									<BookmarkButton property={property} />
 
-									<ShareButtons />
+									<ShareButtons property={property} />
 
 									{/* <!-- Contact Form --> */}
 									<PropertyContactForm property={property} />
