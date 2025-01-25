@@ -12,9 +12,9 @@ const Footer = () => {
         <footer className='bg-gray-200 py-4 mt-24'>
             <div className='container mx-auto flex flex-col md:flex-row items-center justify-between px-4'>
                 <div className='mb-4 md:mb-0'>
-                    <p className='justify-center text-sm text-gray-500 mt-2 md:mt-0'>
+                    {/* <p className='justify-center text-sm text-gray-500 mt-2 md:mt-0'>
                         This is a work in progress! I subscribe to the CI/CD lifestyle and you can find more up to date versions on my github.
-                    </p>
+                    </p> */}
                 </div>
                     
             </div>

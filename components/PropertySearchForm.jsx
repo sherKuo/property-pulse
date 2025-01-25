@@ -17,7 +17,7 @@ const PropertySearchForm = () => {
             router.push('/properties');
         } else {
             const query = `?location=${location}&propertyType=${propertyType}`;
-            router.push(`/properties/search-results{query}`)
+            router.push(`/properties/search-results${query}`)
         }
     }
 
@@ -47,9 +47,10 @@ const PropertySearchForm = () => {
         </label>
         <select
             id='property-type'
-            className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-blue-500'>
+            className='w-full px-4 py-3 rounded-lg bg-white text-gray-800 focus:outline-none focus:ring focus:ring-blue-500'
             value={propertyType}
             onChange={(e) => setPropertyType(e.target.value)}
+            >
             <option value='All'>All</option>
             <option value='Apartment'>Apartment</option>
             <option value='Studio'>Studio</option>
